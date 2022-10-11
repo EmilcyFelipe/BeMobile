@@ -1,11 +1,12 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+export const Container = styled.TouchableOpacity`
   width: 100%;
   background-color: #1c1c1c;
-  height: 60px;
-  padding: 15px 20px;
+  padding: 20px 20px;
   flex-direction: row;
   align-items: center;
 `;
-export const LogoImage = styled.Image``;
+export const LogoImage = styled.Image`
+  margin: 0;
+`;

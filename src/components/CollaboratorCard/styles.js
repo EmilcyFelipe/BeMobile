@@ -2,7 +2,8 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   width: 100%;
-  background-color: #ffffff;
+  background-color: #fff;
+  padding: 0 5%;
 `;
 
 export const HeaderBanner = styled.TouchableOpacity`

@@ -11,33 +11,48 @@ import {
   Value,
 } from './styles';
 
+import {View} from 'react-native';
+
 import Icons from 'react-native-vector-icons/AntDesign';
 
 import UserImage from '../../assets/user_standart.png';
 
-export default function CollaboratorCard() {
+export default function CollaboratorCard({itemData}) {
   const [opened, setOpened] = useState(false);
-  const [data, setData] = useState({
-    name: 'Giovana L. Arruda',
-    role: 'Front-end',
-    launchDate: 1665242725240,
-    phoneNumber: '+55 (55) 55555-555',
-  });
-  const [date, setDate] = useState('--/--/----');
+  const [data, setData] = useState(itemData);
+
+  useEffect(() => {
+    setData(itemData);
+  }, [itemData]);
+
+  const [dateFormated, setDateFormated] = useState('--/--/----');
+  const [phoneFormated, setPhoneFormated] = useState('+55 55 55555-555');
 
   useEffect(() => {
     function convertDateToFormat() {
       let day = new Date(data.launchDate).getDate();
       let month = new Date(data.launchDate).getMonth();
       let year = new Date(data.launchDate).getFullYear();
-      setDate(
+      setDateFormated(
         `${day < 10 ? '0' + day : day}/${
           month < 9 ? '0' + (month + 1) : month + 1
         }/${year}`,
       );
     }
     convertDateToFormat();
-  });
+  }, []);
+
+  useEffect(() => {
+    function formatPhone(value) {
+      const phoneMask = `+${value.slice(0, 2)} (${value.slice(
+        2,
+        4,
+      )}) ${value.slice(4, 10)}-${value.slice(10, 13)} `;
+      setPhoneFormated(phoneMask);
+    }
+    formatPhone(data.phoneNumber);
+  }, []);
+
   return (
     <Container>
       <HeaderBanner
@@ -58,11 +73,11 @@ export default function CollaboratorCard() {
           </DescriptionItem>
           <DescriptionItem>
             <Label>Data de admissão</Label>
-            <Value>{date}</Value>
+            <Value>{dateFormated}</Value>
           </DescriptionItem>
           <DescriptionItem>
             <Label>Telefone</Label>
-            <Value>{data.phoneNumber}</Value>
+            <Value>{phoneFormated}</Value>
           </DescriptionItem>
         </Description>
       )}

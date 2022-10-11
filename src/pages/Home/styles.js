@@ -6,7 +6,8 @@ export const Container = styled.View`
 `;
 
 export const Main = styled.View`
-  padding: 20px;
+  padding: 0 5%;
+  flex: 1;
 `;
 
 export const Title = styled.Text`
@@ -40,4 +41,14 @@ export const LabelWrapper = styled.View`
   padding: 15px 20px;
   align-items: center;
   margin-top: 20px;
+`;
+
+export const List = styled.FlatList`
+  flex: 1;
+`;
+
+export const Separator = styled.View`
+  width: 100%;
+  border-bottom-width: 1.5px;
+  border-color: #d5d5d5;
 `;
