@@ -14,7 +14,7 @@ Esta é minha resolução do desafio [BeMobile](https://github.com/BeMobile/desa
 ## Clonando o Projeto
 Em uma pasta de sua preferência, execute:
 ```bash
-git clone https://github.com/EmilcyFelipe/BeMobile
+git clone https://github.com/EmilcyFelipe/BeMobile.git
 ```
   
 #### Entre no diretório BeMobile
