@@ -83,7 +83,6 @@ export default function Home() {
   }
   useEffect(() => {
     const filteredData = dataList.filter(matchSearch);
-    console.log(filteredData);
     setListToRender(filteredData);
   }, [inputValue]);
 
