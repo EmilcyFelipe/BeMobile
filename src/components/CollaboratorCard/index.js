@@ -60,7 +60,7 @@ export default function CollaboratorCard({itemData}) {
           setOpened(!opened);
         }}>
         <PictureWrapper>
-          <UserPicture source={UserImage} />
+          <UserPicture source={{uri: data.imageUrl}} />
         </PictureWrapper>
         <Name>{data.name}</Name>
         <Icons name={opened ? 'up' : 'down'} size={20} color="#5984C0" />

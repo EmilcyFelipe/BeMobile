@@ -13,10 +13,17 @@ export const HeaderBanner = styled.TouchableOpacity`
   align-items: center;
   padding: 20px;
 `;
-export const PictureWrapper = styled.View``;
-export const UserPicture = styled.Image`
+export const PictureWrapper = styled.View`
   width: 50px;
   height: 50px;
+  border-radius: 25px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+`;
+export const UserPicture = styled.Image`
+  width: 100%;
+  height: 100%;
 `;
 export const Name = styled.Text`
   font-weight: bold;

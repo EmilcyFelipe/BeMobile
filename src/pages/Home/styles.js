@@ -43,10 +43,6 @@ export const LabelWrapper = styled.View`
   margin-top: 20px;
 `;
 
-export const List = styled.FlatList`
-  flex: 1;
-`;
-
 export const Separator = styled.View`
   width: 100%;
   border-bottom-width: 1.5px;
