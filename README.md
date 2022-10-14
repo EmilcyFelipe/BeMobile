@@ -10,6 +10,11 @@ Esta é minha resolução do desafio [BeMobile](https://github.com/BeMobile/desa
 - Yarn 
 - Android Studio
 
+## Construído com:
+- React native
+- Styled Components
+- axios
+- Json-server
 
 ## Clonando o Projeto
 Em uma pasta de sua preferência, execute:
