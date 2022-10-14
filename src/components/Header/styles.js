@@ -9,4 +9,5 @@ export const Container = styled.View`
 `;
 export const LogoImage = styled.Image`
   margin: 0;
+  width: 35%;
 `;

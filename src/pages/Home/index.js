@@ -71,7 +71,7 @@ export default function Home() {
               onChangeText={text => setInputValue(text)}
               placeholder="Pesquisar"
             />
-            <Icon name="search" color="#f0f0f0" size={20} />
+            <Icon name="search" color="#f0f0f0" size={25} />
           </InputWrapper>
           {loadingData ? (
             <ActivityIndicator size="large" />

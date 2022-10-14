@@ -11,11 +11,7 @@ import {
   Value,
 } from './styles';
 
-import {View} from 'react-native';
-
 import Icons from 'react-native-vector-icons/AntDesign';
-
-import UserImage from '../../assets/user_standart.png';
 
 export default function CollaboratorCard({itemData}) {
   const [opened, setOpened] = useState(false);
@@ -47,7 +43,7 @@ export default function CollaboratorCard({itemData}) {
       const phoneMask = `+${value.slice(0, 2)} (${value.slice(
         2,
         4,
-      )}) ${value.slice(4, 10)}-${value.slice(10, 13)} `;
+      )}) ${value.slice(4, 9)}-${value.slice(9, 13)} `;
       setPhoneFormated(phoneMask);
     }
     formatPhone(data.phoneNumber);
